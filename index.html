@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Invoice Generator</title>
+    <link rel="stylesheet" href="index.css" >
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <section>
+        <div class="panel">
+            <h1>Simple Invoice Generator</h1>
+            <p>Tax Rate: 18% GST</legend>
+            <legend>+ Add New Items</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price/Unit</th>
+                        <th>Quantity</th>
+                        <th>Line Total</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceitems"></tbody>
+            </table>
+            <div class="summary">
+                <div class="subtotalsummary">
+                    <span>Subtotal: </span>
+                    <span id="subtotal">0.00</span>
+                </div>
+                <div class="subtotalsummary">
+                    <span>Tax(18%): </span>
+                    <span id="taxAmount">0.00</span>
+                </div>
+                <div class="subtotalsummary grandtotalsummary">
+                    <span>GRAND TOTAL: </span>
+                    <span id="grandtotal">0.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
