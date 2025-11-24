@@ -1,7 +1,7 @@
 :root{
     --primary-color: #01796F;
-    --secondary-color:#C0DFD3;
-    --text-color:#333;
+    --secondary-color: #C0DFD3;
+    --text-color: #333;
     --grand-total-color:red;
     --border-color: #ccc;
     --panel-background: white;
@@ -9,10 +9,9 @@
 html, body{
     margin: 0;
     height: 100%;
-    background:rgb(222, 247, 241) ;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 12pt;
-    background:var(--secondary-color);
+    background: var(--secondary-color);
     color: var(--text-color);
 }
 :focus{
@@ -21,32 +20,37 @@ html, body{
 section{
     height: 100%;
     padding: 50px 0;
+
     display: flex;
     justify-content: center;
 }
 section .panel{
-    min-height: 400px;
     width: 800px;
+    min-height: 400px;
     background: var(--panel-background);
-    padding: 30px;
     border-radius: 10px;
+    padding: 30px;
+
+    display: flex;
     flex-direction: column;
 }
 section .panel h1{
     text-align: center;
-    border-bottom: 3px solid rgb(32, 241, 154);
+    color: var(--primary-color);
+    border-bottom: 3px solid  var(--primary-color);
     padding-bottom: 10px;
 }
 section .panel button{
     border: none;
     width: 150px;
     height: 40px;
-    color: #000;
+    color: var(--panel-background);
     border-radius: 4px;
-    background: rgb(84, 245, 207);
-    margin: 10px;
+    background: var(--primary-color);
+    margin: 10px 0;
+    cursor: pointer;
 }
-section .panel table  {
+section .panel table{
     border-collapse: collapse;
     text-align: center;
 }
@@ -55,11 +59,26 @@ section .panel table thead{
     color: var(--primary-color);
 }
 section .panel table tr{
-   height: 40px;
+    height: 40px;
 }
+section .panel table tr th,
+section .panel table tr td{
+    border: 1px solid var(--border-color);
+}
+section .panel table tbody tr .remove-row{
+    color: var(--grand-total-color);
+    cursor: pointer;
+}
+section .panel table tbody tr td input{
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
 section .panel .summary{
     margin-top: 10px;
     border-top: 3px dashed var(--border-color);
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -71,9 +90,12 @@ section .panel .summary .subtotalsummary{
     display: flex;
     justify-content: space-between;
 }
+section .panel .summary .subtotalsummary span:last-child{
+    font-weight: bold;
+}
 section .panel .summary .grandtotalsummary{
     color: var(--grand-total-color);
-    border-top: 3px solid;
+    border-top: 3px solid var(--primary-color);
     padding-top: 5px;
     font-size: 14pt;
 }

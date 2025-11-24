@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Invoice Generator</title>
-    <link rel="stylesheet" href="index.css" >
-    <script type="text/javascript" src="index.js"></script>
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body onload="loadData()">
     <section>
         <div class="panel">
             <h1>Simple Invoice Generator</h1>
-            <p>Tax Rate: 18% GST</legend>
-            <legend>+ Add New Items</button>
+            <legend>Tax Rate: 18% GST</legend>
+            <button onclick="addItem()">+ Add New Item</button>
             <table>
                 <thead>
                     <tr>
@@ -22,20 +22,20 @@
                         <th>Line Total</th>
                     </tr>
                 </thead>
-                <tbody id="invoiceitems"></tbody>
+                <tbody id="invoiceItems"></tbody>
             </table>
             <div class="summary">
                 <div class="subtotalsummary">
-                    <span>Subtotal: </span>
-                    <span id="subtotal">0.00</span>
+                    <span>Sub Total:</span>
+                    <span id="subTotal">0.00</span>
                 </div>
                 <div class="subtotalsummary">
-                    <span>Tax(18%): </span>
+                    <span>Tax (18%):</span>
                     <span id="taxAmount">0.00</span>
                 </div>
                 <div class="subtotalsummary grandtotalsummary">
-                    <span>GRAND TOTAL: </span>
-                    <span id="grandtotal">0.00</span>
+                    <span>GRAND TOTAL:</span>
+                    <span id="grandTotal">0.00</span>
                 </div>
             </div>
         </div>
